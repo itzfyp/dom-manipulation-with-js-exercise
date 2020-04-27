@@ -1,26 +1,53 @@
 /**
- * removeChild()
+ * insertBefore()
  *
- * expects : a agrgument of childNode to remove
+ * expects :  2 arguments
+ *  1. new element - to be inserted
+ *  2. existing node to insert new el before it
  *
- * returns :  removed node
+ * returns :  inserted node
  *
- * if not found : throws erro
+ * if its not found existing el, it will append new el at the end of parent node
  */
 
 let menu = document.querySelector("#menu");
 
-// remove last element from list
-// const lastEl = menu.lastElementChild;
+function first() {
+  let newEl = document.createElement("li");
 
-//remove some modle element
-const middleEl = menu.querySelectorAll("li")[2];
+  newEl.textContent = "First Element";
 
-//Error scenario :
-//const errorEL = menu;
+  // add before first element from list
+  const firstEl = menu.firstElementChild;
 
-// remove child
-menu.removeChild(middleEl);
+  menu.insertBefore(newEl, firstEl);
+}
+
+first();
+
+function middle() {
+  let newEl = document.createElement("li");
+
+  newEl.textContent = "Middle Element";
+
+  // add before last element from list
+  const lastEl = menu.lastElementChild;
+
+  menu.insertBefore(newEl, lastEl);
+}
+
+middle();
+
+function notFound() {
+  let newEl = document.createElement("li");
+
+  newEl.textContent = "Not Found Element";
+
+  // if no existing node found;
+  menu.insertBefore(newEl, null);
+}
+
+notFound();
 
 // HTML to play with above code
 /*
