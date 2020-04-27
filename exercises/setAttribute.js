@@ -1,9 +1,15 @@
 /**
- * getAttibute()
+ * setAttibute()
  *
- * returns :
- *    value - attribute value
- *    null  - if no attribute available in el
+ * expects : {key : value}
+ *
+ * key : all values will be converted to lowercase
+ * 
+ * value : attribute value
+ *
+ * if values is empty and if its boolean based attribute
+
+ * returns :  undefined
  *
  */
 
@@ -14,12 +20,6 @@ console.log("menu without attibute::", menu);
 menu.setAttribute("name", "menu");
 
 console.log("menu with new attribute ::", menu);
-
-// Get value of Attribute from Element
-
-const attVal = menu.getAttribute("name");
-
-console.log("Get Attriubte get value ::", attVal);
 
 // HTML to play with code
 /*
