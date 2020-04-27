@@ -21,3 +21,24 @@ div.innerText = "replaced with new text";
 // Now in Console, we ca see only last updated text
 // rest of exisitng conent will be replaced with this new text
 console.log(div.innerText);
+
+// HTML to play with above code
+/* 
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dom Manipulation : Create</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="note">
+      JavaScript textContent Demo!
+      <span style="display:none">Hidden Text!</span>
+      <!-- my comment -->
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
+*/
