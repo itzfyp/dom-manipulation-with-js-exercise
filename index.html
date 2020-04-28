@@ -6,7 +6,13 @@
   </head>
 
   <body>
-    <div id="menu">Menu area</div>
+    <div class="main" id="parent">
+      parent element
+      <div class="child-el" id="child">Child element</div>
+    </div>
+    <input id="btn" type="button" value="Save" onclick="showAlert(value,event)">
+
     <script src="src/index.js"></script>
+  
   </body>
 </html>
